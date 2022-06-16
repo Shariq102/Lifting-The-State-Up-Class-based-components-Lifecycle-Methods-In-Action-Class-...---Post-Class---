@@ -39,15 +39,16 @@ function App()
 	   onChange={(event)=> setInputVal(event.target.value)}></textarea>
 	 
 	   <button className="saveTask" onClick={()=> {
+		if(inputVal !== "" ) {
 		const arr = list.map((obj)=> {
-			if(obj.id == item.id && inputVal != "") {
+			if(obj.id == item.id) {
 				obj.task = inputVal;
 			}
 			return obj;
 		}); 
 		setEditable(NaN);
 	    setInputVal("");
-		setList(arr);
+		setList(arr);}
 	   }}>Save</button>
 	   </> :
 		<>
