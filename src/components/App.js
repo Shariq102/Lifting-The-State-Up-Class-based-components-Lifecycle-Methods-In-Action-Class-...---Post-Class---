@@ -40,7 +40,7 @@ function App()
 	 
 	   <button className="saveTask" onClick={()=> {
 		const arr = list.map((obj)=> {
-			if(obj.id == item.id) {
+			if(obj.id == item.id && inputVal != "") {
 				obj.task = inputVal;
 			}
 			return obj;
