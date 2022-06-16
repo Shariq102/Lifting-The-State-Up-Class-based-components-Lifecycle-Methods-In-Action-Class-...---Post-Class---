@@ -14,13 +14,15 @@ function App()
 	};
 	function addInArray(e) {
           e.preventDefault();
-		   
+		  if(inputVal != "") {
 		let obj = {task: inputVal, id: ID,completed: false};
 		let arr = list.slice();
-		 arr.push(obj);
+		
+		arr.push(obj);
 		setList(arr);
 		setInputVal("");
 		setID(ID+1);
+		  }
 		};
 	
 	return (
